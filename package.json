@@ -1,0 +1,26 @@
+{
+  "name": "socket-basic",
+  "version": "1.0.0",
+  "description": "simple chat app with socket",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon ./server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neilnmartin/socket-basic.git"
+  },
+  "author": "Neil Martin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neilnmartin/socket-basic/issues"
+  },
+  "homepage": "https://github.com/neilnmartin/socket-basic#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongoose": "^5.2.13",
+    "nodemon": "^1.18.4",
+    "socket.io": "^2.1.1"
+  }
+}
