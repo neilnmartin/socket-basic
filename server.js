@@ -8,6 +8,10 @@ var users = [];
 
 var connections = [];
 
+// var port = 3005
+
+// app.listen(port, ()=> console.log(`connected to ${port}`))
+
 server.listen(process.env.PORT || 3005);
 console.log('server running')
 
