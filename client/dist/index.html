@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script src="/socket.io/socket.io.js"></script>
+
   <title>Socket App</title>
   <style>
-    body{
-      padding: 20 20;
-      margin-top:30px;
+    body {
+      padding: 20px 20px;
+      margin-top: 30px;
     }
-    #messageArea{
-      display:none
+
+    #messageArea {
+      display: none
     }
   </style>
 </head>
+
 <body>
+  <div id="app">This shouldn't be here</div>
+  <script src="./bundle.js"></script>
+  <!-- <hr/>
   <div class="container">
     <div id="userFormArea" class="row">
       <div class="col-md-12">
@@ -29,7 +36,7 @@
             <input class="form-control" id="username"/>
             <br />
             <input type="submit" class="btn btn-primary" value="Login" />
-          </div>
+            </div>
         </form>
       </div>
     </div>
@@ -96,6 +103,7 @@
         $users.html(html)
       })
     })
-  </script>
+  </script> -->
 </body>
+
 </html>

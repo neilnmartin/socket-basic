@@ -1,5 +1,8 @@
 var express = require('express');
+var path = require('path');
+
 var app = express();
+
 var server = require('http').createServer(app);
 
 var io = require('socket.io').listen(server);
@@ -8,12 +11,15 @@ var users = [];
 
 var connections = [];
 
-server.listen(process.env.PORT || 3005);
-console.log('server running')
+var port = 3005
 
-app.get('/', function(req, res){
-  res.sendFile(__dirname + '/client/index.html')
-});
+server.listen(process.env.PORT || port);
+console.log(`server connected to ${port}`)
+
+// app.get('/', function(req, res){
+//   res.sendFile(__dirname + '/client/dist/index.html')
+// });
+app.use(express.static(path.join(__dirname, '../client/dist/')));
 
 io.sockets.on('connection', (socket)=>{
   connections.push(socket);
@@ -46,4 +52,4 @@ io.sockets.on('connection', (socket)=>{
   function updateUsernames(){
     io.sockets.emit('get users', users);
   }
-})
+});
